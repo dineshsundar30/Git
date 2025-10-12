@@ -7,6 +7,10 @@ To store your user id password in local
     git config --global user.name "dinesh********"
     git config --global user.email "dinesh.gmail.com"
 
+to Know the configured user name and email
+git config user.name
+git config user.email
+
 
 
 To copy file from git
