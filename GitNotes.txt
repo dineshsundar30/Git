@@ -138,3 +138,11 @@ Example:
 git push -u origin main  # first time  
 git push                 # next time  
 
+To push your file in git
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote remove origin
+git remote add origin https://github.com/dineshsundar30/TestBot.git
+git push -u origin main
