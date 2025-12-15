@@ -20,7 +20,7 @@ Basic linux cmds
 ls -la                        To see the hidden files
 rm -rf  dir_name              To force delete
 apt list --installed          To list out installed apps
-
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 GitLab - Ois an open-source DevOps platform that provides Source Code Management and built-in CI/CD functionality. It supports the complete DevOps lifecycle.
 
 Git is a Version Control System.
@@ -28,25 +28,15 @@ Git is a Version Control System.
  * It enables collaboration and provides built-in CI/CD functionality.
 
 Basic Git Commands
-git --version
-This command is used to check the installed Git version.
-git init test-project
-This command creates a new Git repository named "test-project".
-git config --global init.defaultBranch main
-This command sets "main" as the default branch for all newly created repositories.
-cd test-project
-This command is used to navigate into the project directory.
-git branch -m main
-This command renames the current branch to "main".
-ls -al
-This command lists all files and directories, including hidden ones.
+git --version    -- > This command is used to check the installed Git version.
+git init test-project  --> This command creates a new Git repository named "test-project".
+git config --global init.defaultBranch main    --> This command sets "main" as the default branch for all newly created repositories.
+cd test-project    --> This command is used to navigate into the project directory.
+git branch -m main  --> this command renames the current branch to "main".
+ls -al    --> This command lists all files and directories, including hidden ones.
 After initializing a repository, you should see a ".git" folder.
 
 Branching and Merging
-git checkout main
-This command switches to the main branch.
-git log --all --oneline
---all shows the commit history of all branches in the repository.
---oneline displays each commit in a summarized single-line format.
-git merge <branch_name>
-This command merges the specified branch into the current branch (main).
+git checkout main    --> This command switches to the main branch.
+git log --all --oneline      -->  --all shows the commit history of all branches in the repository.  --oneline displays each commit in a summarized single-line format.
+git merge <branch_name> --> This command merges the specified branch into the current branch (main).
