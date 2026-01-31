@@ -40,11 +40,16 @@ Git log & history
 $ git log                                    # Show commit logs
 $ git log --oneline                          # Show condensed logs
 $ git diff                                   # Show changes between commit, branches, files
+$ git diff > changes.diff 
+or git diff > My_changes.txt                  # this saves all currrent uncommitted changes into a file
+
 
 Git stash commands
 $ git stash                                  # Stash current changes
-$ git stash pop                              # Apply stashed changes
+$ git stash apply                            # apply the last changes
+$ git stash pop                              # Apply and remove the last changes
 $ git stash list                             # List all stashes
+$ git stash apply stash@{1}                  # apply the specific stash
 
 Git tag commands
 $ git tag                                    # List tags
@@ -57,6 +62,35 @@ here we can pass file like
 foldername
 test.py
 *.exe      --> so it will not consider all .exe files in your project
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# 1. Fetch latest changes from remote
+git fetch --all
+
+# 2. Checkout your working feature branch
+git checkout 926556_Safescore_feature
+
+# 3. Make sure branch is clean & aligned (optional but safe)
+git reset --hard origin/926556_Safescore_feature
+
+# 4. Rebase your branch onto the latest integration branch
+git rebase -i origin/integ_PI_26.1.1_FVM
+
+# 5. If conflicts occur → resolve them, then:
+git add -u
+git rebase --continue
+
+# (Repeat step 5 until rebase finishes)
+
+# 6. Verify status
+git status
+
+# 7. Force push rebased branch to remote
+git push -f origin 926556_Safescore_feature
+
+
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1. 𝐠𝐢𝐭 𝐝𝐢𝐟𝐟: Show file differences not yet staged.
